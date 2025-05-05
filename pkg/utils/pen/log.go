@@ -27,26 +27,26 @@ func Complete(s *spinner.Spinner, msg string) {
 	log.Info(msg)
 }
 
-func SpinWheel(start string, finish string) {
+func SpinWheel(start string, finish string, wTimeS int) {
 	s := spinner.New(spinner.CharSets[14], 120*time.Millisecond)
 
 	s.Prefix = start
 	s.FinalMSG = ""
 	s.Start()
 
-	time.Sleep(1 * time.Second)
+	time.Sleep(time.Duration(wTimeS * int(time.Second)))
 	s.Stop()
 	log.Info(finish)
 }
 
-func SpinBar(start string, finish string) {
+func SpinBar(start string, finish string, wTimeS int) {
 	s := spinner.New(spinner.CharSets[36], 120*time.Millisecond)
 
 	s.Prefix = start
 	s.FinalMSG = ""
 	s.Start()
 
-	time.Sleep(1 * time.Second)
+	time.Sleep(time.Duration(wTimeS * int(time.Second)))
 	s.Stop()
 	log.Info(finish)
 }
