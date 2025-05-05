@@ -52,7 +52,7 @@ func BenchmarkConsumerThroughput(messageCount int, messageSizeKB int, batchSize 
 	pen.SpinWheel("Started consuming ", fmt.Sprintf("Consumed %f mb data %f", totalMB, throughput), 1)
 
 	return ConsumeThroughput{
-		Desc:               "network I/O",
+		Desc:               "network I/O througput",
 		Broker:             "ripple",
 		ReadBatchSize:      batchSize,
 		MessageSizeInBytes: 1024 * messageSizeKB,

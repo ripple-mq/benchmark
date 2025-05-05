@@ -139,8 +139,8 @@ func consume(messageCnt int, messageSizeKB int, batchSize int) ConsumeThroughput
 	throughput := mb / elapsed.Seconds()
 
 	return ConsumeThroughput{
-		Desc:                 "network I/O",
-		Broker:               "kafa",
+		Desc:                 "network I/O througput",
+		Broker:               "kafka",
 		ReadBatchSizeInBytes: r.Config().MaxBytes,
 		MessageSizeInBytes:   1024 * messageSizeKB,
 		TotalDataInBytes:     float64(messageCnt * 1024.0),
