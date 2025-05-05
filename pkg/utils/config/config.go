@@ -3,7 +3,7 @@ package config
 import (
 	"fmt"
 
-	testutils "github.com/ripple-mq/ripple-server/test"
+	testutils "github.com/ripple-mq/benchmark/test"
 	"github.com/spf13/viper"
 )
 
